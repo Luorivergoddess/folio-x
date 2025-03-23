@@ -6,7 +6,7 @@ export const fontConfig = {
     name: "Maple Mono",
     src: "/fonts/MapleMonoRegular.ttf",
     variable: "font-primary",
-    display: "swap" as const
+    display: "fallback" as const
   },
   fallback: "system-ui, -apple-system, sans-serif"
 } as const
@@ -15,5 +15,5 @@ export const fontConfig = {
 export const primary = localFont({
   src: '../../../public/fonts/MapleMonoRegular.ttf',
   variable: '--font-primary',
-  display: 'swap'
+  display: 'fallback'
 })
