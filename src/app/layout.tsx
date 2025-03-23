@@ -5,8 +5,7 @@ import classNames from "classnames";
 
 import { Footer, Header, RouteGuard } from "@/components";
 import { baseURL, effects, style } from "@/app/resources";
-
-import { Inter } from "next/font/google";
+import { primary } from "@/app/resources/fonts";
 import { Source_Code_Pro } from "next/font/google";
 
 import { person, home } from "@/app/resources/content";
@@ -39,24 +38,12 @@ export async function generateMetadata() {
   };
 }
 
-const primary = Inter({
-  variable: "--font-primary",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-type FontConfig = {
+type NextFontWithVariable = {
   variable: string;
-};
+} & { [key: string]: any };
 
-/*
-	Replace with code for secondary and tertiary fonts
-	from https://once-ui.com/customize
-*/
-const secondary: FontConfig | undefined = undefined;
-const tertiary: FontConfig | undefined = undefined;
-/*
- */
+const secondary: NextFontWithVariable | undefined = undefined;
+const tertiary: NextFontWithVariable | undefined = undefined;
 
 const code = Source_Code_Pro({
   variable: "--font-code",
